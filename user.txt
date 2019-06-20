@@ -1,0 +1,2 @@
+cedula,nombre,apellido,email,usuario,clave,rol,aerolinea,departamento
+0914090998,William,Ayala,wijoayal@espol.edu.ec,wijoayal,Wj789456,admin,,Admin
