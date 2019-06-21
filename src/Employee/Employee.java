@@ -3,13 +3,10 @@ package Employee;
 import Items.Aeroline;
 import Items.Department;
 
-public abstract class Employee {
-    int cedula;
-    String nombre, apellido, email, usuario, clave, rol;
-    Items.Aeroline aeroline;
-    Items.Department department;
+public class Employee {
+    String cedula, nombre, apellido, email, usuario, clave, rol, aeroline, department;
 
-    public Employee(int cedula, String nombre, String apellido, String email, String usuario, String clave, String rol, Aeroline aeroline, Department department) {
+    public Employee(String cedula, String nombre, String apellido, String email, String usuario, String clave, String rol, String aeroline, String department) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,11 +18,15 @@ public abstract class Employee {
         this.department = department;
     }
 
-    public int getCedula() {
+    public Employee(){
+
+    }
+
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
@@ -77,19 +78,35 @@ public abstract class Employee {
         this.rol = rol;
     }
 
-    public Aeroline getAeroline() {
+    public String getAeroline() {
         return aeroline;
     }
 
-    public void setAeroline(Aeroline aeroline) {
+    public void setAeroline(String aeroline) {
         this.aeroline = aeroline;
     }
 
-    public Department getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "cedula='" + cedula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", email='" + email + '\'' +
+                ", usuario='" + usuario + '\'' +
+                ", clave='" + clave + '\'' +
+                ", rol='" + rol + '\'' +
+                ", aeroline='" + aeroline + '\'' +
+                ", department='" + department + '\'' +
+                '}';
+    }
 }
+
