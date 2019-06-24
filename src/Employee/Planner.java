@@ -1,22 +1,23 @@
 package Employee;
 
+import java.sql.Time;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Planner extends Employee {
-    String codVuelo, fechaEmbarque, horaEmbarque, fechaSalida, horaSalida, fechaArribo, horaArribo, codIataSalida, codIataArribo;
-    int puertaEsalida, puertaEarribo;
-    int numPuertas= 8;
-
-    public Planner(String cedula, String nombre, String apellido, String email, String usuario, String clave, String rol, String aeroline, String department) {
+        public Planner(String cedula, String nombre, String apellido, String email, String usuario, String clave, String rol, String aeroline, String department) {
         super(cedula, nombre, apellido, email, usuario, clave, rol, aeroline, department);
     }
     public Planner(){
 
     }
     public class planificarVuelo {
+        String codVuelo, codIataSalida, codIataArribo, fechaEmbarque, fechaSalida, fechaArribo, horaEmbarque,  horaSalida,  horaArribo;
+        int puertaEsalida, puertaEarribo;
+        int numPuertas= 8;
         public void main(String[] args){
-            Scanner eleccion = new Scanner(System.in);
+            Scanner consola = new Scanner(System.in);
             boolean salir = false;
             int opcion; // Aqui se guarda la opcion elegida por el Planner.
             while (!salir){
@@ -26,7 +27,7 @@ public class Planner extends Employee {
                 System.out.println("4. Salir");
                 try {
                     System.out.println("Selecciona uno de los Aviones");
-                    opcion = eleccion.nextInt();
+                    opcion = consola.nextInt();
                     switch (opcion) {
                         case 1:
                             System.out.println("Has seleccionado el Avion 1");
@@ -45,15 +46,32 @@ public class Planner extends Employee {
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Debes insertar un número");
-                    eleccion.next();
+                    consola.next();
                 }
              }
+            System.out.println("Ingrese el codigo del vuelo: ");
+            codVuelo = consola.nextLine();
+            System.out.println("Ingrese la fecha de embarque: ");
+            fechaEmbarque = consola.nextLine();
+            System.out.println("Ingrese la hora de embarque: ");
+            horaEmbarque = consola.nextLine();
+            System.out.println("Ingrese la fecha de salida: ");
+            fechaSalida = consola.nextLine();
+            System.out.println("Ingrese la hora de salida: ");
+            horaSalida = consola.nextLine();
+            System.out.println("Ingrese la fecha de arribo: ");
+            fechaArribo = consola.nextLine();
+            System.out.println("Ingrese la hora de arribo: ");
+            horaArribo = consola.nextLine();
+
+
+
         }
 
     }
-    public void disponibilidadVuelos(){
 
-    }
+    public void disponibilidadVuelos(){
+      }
     private void registrarAviones(){
 
     }
