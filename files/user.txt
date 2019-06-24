@@ -1,0 +1,3 @@
+cedula,nombre,apellido,email,usuario,clave,rol,aerolinea,departamento
+0914090998,William,Ayala,wijoayal@espol.edu.ec,wijoayal,V2o3ODk0NTY=,Admin,,Sistemas
+0906827589,Nancy,Quinde,nanquind@hotmail.com,mamita,TWFtaXRhMDE=,Admin,,Sistemas

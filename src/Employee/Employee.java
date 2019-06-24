@@ -1,8 +1,5 @@
 package Employee;
 
-import Items.Aeroline;
-import Items.Department;
-
 public class Employee {
     String cedula, nombre, apellido, email, usuario, clave, rol, aeroline, department;
 
